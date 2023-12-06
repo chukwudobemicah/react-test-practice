@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^14.0.3",
+    "@testing-library/user-event": "^14.5.1",
     "eslint-plugin-jest-dom": "^5.1.0",
     "next": "14.0.3",
     "react": "^18",
