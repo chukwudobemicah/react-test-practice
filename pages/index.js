@@ -8,6 +8,9 @@ export default function Home() {
   const toggleText = () => {
     setShowText((prev) => !prev);
   };
+  // useEffect(() => {
+  //   setTimeout(() => setShowText((prev) => !prev), 500);
+  // });
 
   return (
     <main

@@ -47,15 +47,17 @@ describe("Home Page", () => {
       const showTextBtn = screen.getByRole("button", { name: "click me" });
       await userEvent.click(showTextBtn);
       // expect(screen.getByText("Show text")).toBeInTheDocument();
-      // expect(
-      //   await screen.findByText("Show text", {}, { timeout: 5000 })
-      // ).toBeInTheDocument()
-      await waitFor(
-        () => {
-          expect(screen.getByText("Show text")).toBeInTheDocument();
-        },
-        { timeout: 1200 }
-      );
+      expect(
+        await screen.findByText("Show text", {}, { timeout: 5000 })
+      ).toBeInTheDocument();
+      // await waitFor(
+      //   () => {
+      //     expect(screen.getByText("Show text")).toBeInTheDocument();
+      //   },
+      //   { timeout: 1200 }
+      // );
     });
   });
 });
+
+// use findByText when you know an element will take a little to show up, use getByText otherwise
